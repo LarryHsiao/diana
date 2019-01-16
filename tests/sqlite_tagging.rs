@@ -1,7 +1,7 @@
-extern crate Diana;
+extern crate diana;
 
-use Diana::sqlite_tagging::*;
-use Diana::tagging::Objects;
+use diana::sqlite_tagging::*;
+use diana::tagging::Objects;
 
 #[test]
 fn object_adding() {
