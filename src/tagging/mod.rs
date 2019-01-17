@@ -1,6 +1,5 @@
 pub trait Tags {
-    fn iterator(&self) -> Box<Iterator<Item=Object>>;
-    fn add_tag(&self) -> Box<Tag>;
+    fn add_tag(&self) -> &Tag;
 }
 
 pub trait Tag {
@@ -8,7 +7,7 @@ pub trait Tag {
 }
 
 pub trait Objects {
-    fn add_object(&self, uri: &str) -> Box<Object>;
+    fn add_object(&self, uri: &str) -> &Object;
 }
 
 pub trait Object {
