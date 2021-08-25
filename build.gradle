@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "com.larryhsiao.thea" version "1.5.0"
+}
+
+System.out.println(thea.versionIndicator(""))
+
+ext {
+    dianaVersion = thea.version().versionName()
+}
+
+group 'com.larryhsiao'
+version dianaVersion
+
+mainClassName='com.larryhsiao.diana.Main'
+repositories {
+    maven {url = "https://larryhsiao.com:11000/repository/maven-public/"}
+}
+
+dependencies {
+    implementation group: 'org.takes', name: 'takes', version: '1.11.3'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
