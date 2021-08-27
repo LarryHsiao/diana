@@ -1,4 +1,4 @@
-package com.larryhsiao.diana;
+package com.larryhsiao.diana.bookings;
 
 /**
  * Represents a subject to booking.
